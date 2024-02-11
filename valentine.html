@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+<head> 
+<title>💗</title>
+
+<link href="valentine.css" rel="stylesheet" media="screen" type="text/css">
+<script src="valentine.js"></script>
+
+
+
+</head>
+
+<body>
+
+<div class="top">
+
+
+<img class="img23" id="img2" src="https://i.pinimg.com/originals/63/7c/d5/637cd5a830ab56a7da3054740c894225.gif">
+<img id="img1" src="https://i.pinimg.com/736x/6d/2b/3e/6d2b3ea489600a8d8201ee864fbbd1f4.jpg" >
+<img class="img23" id="img3" src="https://i.pinimg.com/originals/d9/92/64/d99264eefc942c2d10ef0521ab0656ff.gif">
+
+	
+
+</div>
+
+	
+
+
+	
+<div class="container">
+
+
+
+	<button id="yes" onclick="yes()">Yes</button>
+
+	<button id="no" onclick="changenobutton()">No</button>
+</div>
+
+
+<div class="bottom">
+<img id = "splash" src="https://media.istockphoto.com/id/1402818447/vector/water-spill-on-a-floor-puddle-isometric-vector-cartoon.jpg?s=612x612&w=0&k=20&c=B9tcHuzc-fnQ74DiBu9R7YW3Yy24dVIguDZr0R01EVU=">
+
+
+<script>
+
+var a = "https://i.pinimg.com/736x/d7/1d/06/d71d0610eb5bf8e9f08bd6f57bf6d5fd.jpg";
+var b ="https://i.pinimg.com/736x/aa/1f/e9/aa1fe958ba42e236259251f975388073.jpg";
+var c ="https://i.pinimg.com/736x/8f/58/42/8f5842b31a2f2e49e9f6874955bdaf6a.jpg";
+var d ="https://i.pinimg.com/736x/a2/7f/bc/a27fbc9c1289ba987028ffcd11fbb292.jpg";
+
+
+function yes() {
+
+var gif = document.getElementById("img1");
+img1.src="https://i.pinimg.com/originals/72/6e/57/726e574be1a8370f3d41f7d994da45f3.gif";
+var targetyesButton = document.getElementById("yes");
+//targetyesButton.remove();
+ var targetnoButton = document.getElementById("no");
+targetnoButton.remove();
+
+    var newParagraph = document.createElement("p");
+    
+    // Create text node for the paragraph
+    var paragraphText = document.createTextNode("Yay! I like you so much. You are all mine now mwhwahahah 😘");
+    
+    // Append the text node to the paragraph element
+    newParagraph.appendChild(paragraphText);
+    
+    // Replace the button with the new paragraph element
+    targetyesButton.replaceWith(newParagraph);
+splasher.style.display = "none"
+};
+
+
+var mylist = ["are you sure?", "really paul?", "you must've got hit by a rock, try again", "bruh..."];
+
+var imglist = [a,b,c,d]
+
+
+// Index to keep track of the current word
+var currentIndex = 0;
+
+// Get the button element
+var targetnoButton = document.getElementById("no");
+var img1no = document.getElementById("img1");
+var splasher = document.getElementById("splash");
+
+
+// Add event listener to the button
+no.addEventListener("click", function() {
+    // Change the button text to the next word in the array
+    targetnoButton.textContent = mylist[currentIndex];
+    img1no.src = imglist[currentIndex];
+
+
+
+    // Move to the next word in the array
+    currentIndex++;
+
+    if (currentIndex == 2){
+    splasher.style.display = "block";
+} else {
+splasher.style.display = "none"
+    }
+
+    
+    // Reset index if it goes beyond the array length
+    if (currentIndex >= mylist.length) {
+        currentIndex = 0;
+    }
+
+
+
+
+
+
+
+});
+
+
+function changenobutton() {
+            // Get the element by its ID
+        
+     
+            
+
+	
+	var targetnoButton = document.getElementById("no");
+	
+    	var targetyesButton = document.getElementById("yes");
+
+
+
+
+
+
+var currentWidth = parseInt(window.getComputedStyle(targetnoButton).getPropertyValue("width"));
+    var currentHeight = parseInt(window.getComputedStyle(targetnoButton).getPropertyValue("height"));
+    var currentFontSize = parseInt(window.getComputedStyle(targetnoButton).getPropertyValue("font-size"));
+
+    // Increase the size by 10 pixels
+    targetnoButton.style.width = (currentWidth - 10) + "px";
+    targetnoButton.style.height = (currentHeight - 10) + "px";
+    targetnoButton.style.fontSize = (currentFontSize - 2) + "px"; // Adjust the font size accordingly
+    targetnoButton.style.padding = "10px 20px"; // Optionally adjust the padding
+
+var currentWidth = parseInt(window.getComputedStyle(targetyesButton).getPropertyValue("width"));
+    var currentHeight = parseInt(window.getComputedStyle(targetyesButton).getPropertyValue("height"));
+    var currentFontSize = parseInt(window.getComputedStyle(targetyesButton).getPropertyValue("font-size"));
+
+    // Increase the size by 10 pixels
+    targetyesButton.style.width = (currentWidth + 10) + "px";
+    targetyesButton.style.height = (currentHeight + 10) + "px";
+    targetyesButton.style.fontSize = (currentFontSize + 10) + "px"; // Adjust the font size accordingly
+    targetyesButton.style.padding = "10px 20px"; // Optionally adjust the padding
+   };
+
+
+
+
+  </script>
+
+</div>
+
+
+
+
+</body>
